@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Update Your Profile</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	
+
+	<style>
+		#btnsubmit {
+			margin-left: 30rem;
+		}
+	</style>
+
+</head>
+
+<body>
+
+
+
+
+
+
+	<div class="container">
+		<div class="text-center signup-heading">
+
+			<h1>Profile Update</h1>
+		</div>
+
+
+		<form class="needs-validation" action="/updaterecruiter" method="POST" enctype="multipart/form-data">
+			<div class="form-row">
+				<div class="ml-auto" style="text-align:center;">
+					I represent a* <br>
+					<input type="radio" id="html" name="company" value="HTML">
+					<label for="html">Company</label>
+					<input type="radio" id="css" name="company" value="CSS">
+					<label for="css">Placement agency</label>
+				</div>
+				<div class="col-lg-12 mb-3">
+					
+
+					<label> Full Name*<span class="glyphicon glyphicon-pencil" style=" cursor:pointer;" onclick="showDiv1()"></span></label>
+					
+					<input type="text" id="welcomeDiv1" class="form-control" style="display:none;" name="fullname"   >
+				</div>
+
+				<div class="col-lg-12 mb-3">
+					<label>Company Name*<span class="glyphicon glyphicon-pencil" style=" cursor:pointer;" onclick="showDiv2()"></span></label>
+					<input type="text" class="form-control" name="company"  id="welcomeDiv2"  style="display:none;">
+				</div>
+				<div class="col-lg-12 mb-3">
+					<label>Mobile Number*<span class="glyphicon glyphicon-pencil" style=" cursor:pointer;" onclick="showDiv3()"></span></label>
+					
+						<input type="text" class="form-control" name="mobile" id="welcomeDiv3" style="display:none;">
+				</div>
+				<div class="col-lg-12 mb-3">
+					<label for="exampleFormControlTextarea1">Designation*<span class="glyphicon glyphicon-pencil" style=" cursor:pointer;" onclick="showDiv4()"></span></label>
+					<textarea class="form-control" id="welcomeDiv4" style="display:none;" rows="1"
+						name="designation"></textarea>
+				</div>
+				<div class="col-lg-4 mb-3">
+					<label>Office Mail*<span class="glyphicon glyphicon-pencil" style=" cursor:pointer;" onclick="showDiv5()"></span></label>
+					<input type="text" class="form-control" id="welcomeDiv5" style="display:none;" name="officemail">
+				</div>
+				<div class="col-lg-4 mb-3">
+					<label>Company Location*<span class="glyphicon glyphicon-pencil" style=" cursor:pointer;" onclick="showDiv6()"></span></label>
+					<input type="text" class="form-control" id="welcomeDiv6" style="display:none;" name="companylocation"
+						placeholder="Enter Full Location">
+				</div><br>
+				<div class="col-lg-4 mb-3">
+					<label>Company Size*<span class="glyphicon glyphicon-pencil" style=" cursor:pointer;" onclick="showDiv7()"></span></label>
+					<input type="text" class="form-control" id="welcomeDiv7" style="display:none;" name="comsize"
+						placeholder="Enter only numbers">
+				</div><br>
+
+
+			</div>
+			<div class="col-lg-12 mb-3">
+				<label for="">Alternate Phone No*<span class="glyphicon glyphicon-pencil" style=" cursor:pointer;" onclick="showDiv8()"></span></label>
+				<input class="form-control" pattern=".{10}" type="tel" name="alternatephone" oninput="check(this)"
+					id="welcomeDiv8" style="display:none;">
+			</div>
+			<div class="col-lg-12 mb-3">
+				<label>Alternative Email address*<span class="glyphicon glyphicon-pencil" style=" cursor:pointer;" onclick="showDiv9()"></span></label>
+				<input type="email" class="form-control" id="welcomeDiv9" style="display:none;" name="alternateemail">
+			</div>
+
+			<div class="col-lg-12 mb-3">
+				<label for="validationCustom04">Gender*<span class="glyphicon glyphicon-pencil" style=" cursor:pointer;" onclick="showDiv10()"></span></label>
+				<input type="text" class="form-control" id="welcomeDiv10" style="display:none;" name="gender"
+					placeholder="Enter Male/Female/Other">
+			</div>
+			<div class="col-lg-12 mb-3">
+				<label for="dob">Date of Birth*<span class="glyphicon glyphicon-pencil" style=" cursor:pointer;" onclick="showDiv11()"></span></label>
+				<input class="form-control" type="date" name="dob" id="welcomeDiv11" style="display:none;">
+			</div>
+			<div class="col-lg-12 mb-3">
+				<label for="prev">Previous Position*<span class="glyphicon glyphicon-pencil" style=" cursor:pointer;" onclick="showDiv12()"></span> </label>
+				<input type="text" class="form-control" id="welcomeDiv12" style="display:none;" name="prev" >
+			</div>
+			<div class="col-lg-12 mb-3">
+				<label for="">Year of Experience*<span class="glyphicon glyphicon-pencil" style=" cursor:pointer;" onclick="showDiv13()"></span></label>
+				<input type="text" class="form-control" id="welcomeDiv13" style="display:none;" name="yoe" >
+			</div>
+			<div class="col-lg-12 mb-3">
+				<label for="">Previous Company*<span class="glyphicon glyphicon-pencil" style=" cursor:pointer;" onclick="showDiv14()"></span></label>
+				<input type="text" class="form-control" id="welcomeDiv14" style="display:none;" name="currcom" >
+			</div>
+
+			<div class="col-lg-12 mb-3">
+				<label for="">Upload Your Govt.Id <span class="glyphicon glyphicon-pencil" style=" cursor:pointer;" onclick="showDiv15()"></span><b style="color:red">Only .pdf format is acceptable and
+						file Size 2MB(Maximum)*</b></label><br>
+				<input type="file" id="welcomeDiv15" style="display:none;" name="govtid">
+			</div><br>
+			<div class="col-lg-12 mb-3">
+				<label for="">Upload Your Office Id Proof <span class="glyphicon glyphicon-pencil" style=" cursor:pointer;" onclick="showDiv16()"></span><b style="color:red">Only .pdf format is
+						acceptable and file Size 4MB(Maximum)*</b></label><br>
+				<input type="file" id="welcomeDiv16" style="display:none;" name="officeid">
+			</div>
+
+			<div class="col-lg-12 mb-3">
+				<label for="">Upload Your Photo <span class="glyphicon glyphicon-pencil" style=" cursor:pointer;" onclick="showDiv17()"></span><b style="color:red">Only .jpg,.jpeg format is acceptable
+						and file
+						Size 2MB(Maximum)*</b></label><br>
+						<!-- id="myFile" -->
+				<input type="file"  id="welcomeDiv17" style="display:none;" name="photo">
+			</div>
+
+			<div class="text-center">
+				<button class="btn btn-primary" type="button">
+					Submit
+				</button>
+			</div>
+		</form>
+
+
+
+	</div>
+
+
+
+
+	<!-- /#wrapper -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script>
+		$("#menu-toggle").click(function (e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+
+
+		function showDiv1() {
+				document.getElementById('welcomeDiv1').style.display = "block";
+				
+			}
+		function showDiv2(){
+			document.getElementById('welcomeDiv2').style.display = "block";
+
+		}
+		function showDiv3() {
+				document.getElementById('welcomeDiv3').style.display = "block";
+
+			}
+			function showDiv4() {
+					document.getElementById('welcomeDiv4').style.display = "block";
+
+				}
+				function showDiv5() {
+						document.getElementById('welcomeDiv5').style.display = "block";
+
+					}
+					function showDiv6() {
+							document.getElementById('welcomeDiv6').style.display = "block";
+
+						}
+						function showDiv7() {
+								document.getElementById('welcomeDiv7').style.display = "block";
+
+							}
+							function showDiv8() {
+									document.getElementById('welcomeDiv8').style.display = "block";
+
+								}
+								function showDiv9() {
+										document.getElementById('welcomeDiv9').style.display = "block";
+
+									}
+									function showDiv10() {
+											document.getElementById('welcomeDiv10').style.display = "block";
+
+										}
+										function showDiv11() {
+												document.getElementById('welcomeDiv11').style.display = "block";
+
+											}
+											function showDiv12() {
+													document.getElementById('welcomeDiv12').style.display = "block";
+
+												}
+												function showDiv13() {
+														document.getElementById('welcomeDiv13').style.display = "block";
+
+													}
+													function showDiv14() {
+															document.getElementById('welcomeDiv14').style.display = "block";
+
+														}
+														function showDiv15() {
+																document.getElementById('welcomeDiv15').style.display = "block";
+
+															}
+															function showDiv16() {
+																	document.getElementById('welcomeDiv16').style.display = "block";
+
+																}
+																function showDiv17() {
+																		document.getElementById('welcomeDiv17').style.display = "block";
+
+																	}
+	</script>
+	</div>
+
+
+
+	<!-- HTML !-->
+
+
+
+
+</body>
+
+</html>

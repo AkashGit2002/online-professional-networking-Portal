@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<title>Jobs Page</title>
+</head>
+
+<body>
+	
+	<style>
+		#salary{
+background-color: rgb(84, 212, 10);
+  color: black;
+		}
+		/* mark {
+  .open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+	</style>
+
+<div class="form-popup" id="myForm">
+	<form id="form" class="form-container">
+		<br><br><br>
+		<label for="fullname">Enter Mail Id</label>
+		<input type="text" class="text" name="mailid" placeholder="Enter Your mailId" required><br>
+		<label for="jobid"> Job Id</label>
+		<input type="text" class="text" name="jobid" placeholder="Enter Your Job Id" required><br>
+		<label for="jobname">Job Name</label>
+		<input type="text" class="text" name="jobname" placeholder="Enter Your Job Name" required><br>
+		<label for="hrmail">Hr Mail Id</label>
+		<input type="text" class="text" name="hrmail" placeholder="Enter Hr Mail Id" required><br>
+		<label for="myfile">Upload Your CV/RESUME:</label>
+		<input type="file" id="myfile" name="myfile">
+
+		<a href="/sendemail"><button type="submit" class="btn">Apply</button></a>
+		
+		<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+	</form>
+</div>
+
+		<form action="" id="form">
+			
+		</form>
+
+	<section>
+
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		
+			<div class="container-fluid">
+		
+				<a href="./jobseeker.index.html"><img src="/images/logo.png" alt=""
+						style="height: 80px; width: 100px; padding-left: 18px"></a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+					aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="./company.html">COMPANIES <span class="sr-only"></span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/">PROFILE</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/prepare123.html">PREPARE</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./aboutus.html">About Us <span class="sr-only"></span></a>
+						</li>
+		
+						<li class="nav-item">
+							<a class="nav-link" href="/jobseeker.contact">Contact Us<span class="sr-only"></span></a>
+						</li>
+						
+					</ul>
+		
+		
+					
+				</div>
+		
+			</div>
+		</nav>
+
+	</section>
+<br><br><br>
+	<div class="row">
+		<% if(result.length){ for(var i=0; i< result.length; i++) {%>
+		<div class="col-sm-6">
+			<div class="card text-center">
+				<div class="card-body">
+					<h2 class="card-title"><%= result[i].title %></h2>
+					<p class="card-text"><b>Location:  </b><%= result[i].loc %></p>
+					<p class="card-text"><h4><b>Job Id: </b></h4>
+						<mark>
+							<%= result[i].JobId %>						</mark>
+					</p>
+					<p class="card-text">
+						<h4><b>Skills: </b> </h4> <mark><%= result[i].skills %></mark>
+
+					
+						
+					</p>
+					<p class="card-text">
+						<h4><b>Job Type </b></h4> <mark>
+							<%= result[i].type %>
+						</mark>
+						
+					</p>
+					<p class="card-text">
+						<h4><b>Job Category</b></h4> <mark>
+							<%= result[i].category %>
+						</mark>
+						
+					</p>
+					<p class="card-text">
+						<h4><b>Job requirements</b></h4> <mark>
+							<%= result[i].req %>
+						</mark>
+						
+					</p>
+					<p class="card-text">
+						<h4><b>Job description</b></h4> <mark>
+							<%= result[i].role %>
+						</mark>
+
+
+					</p>
+					<p class="card-text">
+					<h4><b>Company Name</b></h4> <mark>
+						<%= result[i].com_name %>
+					</mark>
+
+
+						
+					</p>
+
+
+					<p class="card-text">
+					<h4><b>Recruiter Mail Id</b></h4> <mark>
+						<%= result[i].recruiter_mail %>
+					</mark>
+
+						
+					</p>
+					<p class="card-text">
+
+						<h4><b>Close Date:</b></h4> <mark>
+							<%= result[i].close %>
+						</mark>
+						
+						
+						
+					</p>
+					<p class="card-text">
+
+						<h4><b >Salary:</b></h4> <mark id="salary">
+							<%= result[i].salary%>
+						</mark>
+						
+					</p>
+					<p class="card-text">
+						<h4><b>Experience:</b></h4> <mark>
+							<%= result[i].experience %>
+						</mark>
+						
+					</p>
+					
+
+					<button class="btn btn-primary" onclick="openForm()">Apply</button>
+				</div>
+			</div>
+<br><br>
+		</div>
+		<br><br><br><br>
+	<% } }else{ %>
+		<div class="text-center">
+			<h2>No Jobs</h2>
+		</div>
+	
+	
+		<% } %>
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<section id="contact"
+		style="background-color: black; ;padding: 20px;width: 700 px;line-height: 2.5em; text-align:centre;">
+		<footer class="color-blue custom-footer-padding footer">
+			<div class="container-fluid text-white">
+				<i class="l-r-p social-icon fab fa-facebook-f"></i>
+				<i class="l-r-p social-icon fab fa-twitter"></i>
+				<i class="l-r-p social-icon fab fa-instagram"></i>
+				<i class="l-r-p social-icon fas fa-envelope"></i>
+				<p>
+				<h4 align="center">©Copyright 2022, All rights reserved.</h4>
+				</p>
+				<p>
+				<h4 align="center">Email:jobsDaily@gmail.com</h4>
+				</p>
+				<p>
+				<h4 align="center">MOB: 8777691386</h4>
+				</p>
+			</div>
+		</footer>
+	</section>
+
+	<script>
+
+		function openForm() {
+			document.getElementById("myForm").style.display = "block";
+		}
+
+		function closeForm() {
+			document.getElementById("myForm").style.display = "none";
+		}
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous">
+	
+
+	
+	</script>
+
+	<!-- Option 2: Separate Popper and Bootstrap JS -->
+	<!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

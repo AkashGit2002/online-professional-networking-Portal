@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0px;
+			padding: 0px;
+			text-decoration: none;
+			list-style: none;
+			box-sizing: border-box;
+			font-family: monospace;
+			position: sticky;
+			height: 100%;
+		}
+		body{
+			height: 100000000000vh;
+		}
+		nav{
+			background: #0082e6;
+			height: 82px;
+			width:100%;
+			position: sticky;
+		}
+		label.logo{
+			color:white;
+			font-size: 35px;
+			line-height: 80px;
+			padding:0 20px;
+			font-weight: bold;
+		}
+		.logo:hover{
+			cursor: pointer;
+			font-size: 48px;
+		}
+		nav ul{
+			float:left;
+			margin-right: 40px;
+		}
+		nav ul li{
+			display: inline-block;
+			line-height: 80px;
+			margin:0 5px;
+		}
+
+		nav ul li a{
+			color:white;
+			font-size: 17px;
+			text-transform: uppercase;
+			
+		}
+		a:hover{
+			font-size: 20px;
+		}
+		ul.sec{
+			float: right;
+		}
+
+
+
+
+.button-1 {
+  background-color: #1deb0a;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-1:hover,
+.button-1:focus {
+  background-color: #1deb0a;
+}
+
+@media(max-width: 600px){
+	label.logo{
+		font-size: 30px;
+		padding-left: 50px;
+	}
+	nav ul li a{
+		font-size: 16px;
+	}
+}
+
+@media(max-width:858px)
+{
+	.button-1{
+		display: block;
+	}
+	ul{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		top:80px;
+		text-align: center;
+
+	}
+}
+		
+	</style>
+</head>
+<body>
+	<nav class="container">
+		
+		<ul>
+			<label class="logo">JobsDaily</label>
+			<li><a href="" >HOME</a></li>
+			<li><a href="">COMPANIES</a></li>
+			<li><a href="">PROFILE</a></li>
+			<li><a href="">PREPARE</a></li>
+			<li><a href="">ABOUT US</a></li>
+			
+		</ul>
+		<ul class="sec">
+			<li><a href="file:///E:/online%20job%20portal/registration.html" target="_blank"><span
+						class="glyphicon glyphicon-log-in"></span>
+					<h5>EMPLOYEE LOGIN</h5>
+				</a></li>
+			<li><a href="file:///E:/online%20job%20portal/registration.html" target="_blank"><span
+						class="glyphicon glyphicon-log-in"></span>
+					<h5>EMPLOYER LOGIN</h5>
+				</a></li>
+
+				<a href=""><button class="button-1" role="button">POST JOB</button></a>
+		</ul>
+	</nav>
+</body>
+</html>

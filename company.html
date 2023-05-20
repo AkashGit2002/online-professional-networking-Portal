@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style>
+    .main{
+      background-color:#BBBCB6;
+      
+      
+    }
+  
+
+		* {
+  box-sizing: border-box;
+
+}
+
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+  background-color:#BBBCB6;
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #4d4d4d;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+.nav > .nav-header > .nav-title{
+  display:inline;
+  
+}
+
+.nav > .nav-header > .nav-title >a {
+  display: inline-block;
+  font-size: 22px;
+  color: #efefef;
+  text-decoration: none;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+	</style>
+	<!-- <div class="nav">
+		<input type="checkbox" id="nav-check">
+		<div class="nav-header">
+			<div class="nav-title" >
+				<a href="C:\Users\DIPAYAN DUTTA\Videos\demo (1).html" >NOTIFICATION</a>
+			</div>
+		</div>
+		<div class="nav-btn">
+			<label for="nav-check">
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
+		</div>
+	
+		<div class="nav-links">
+			<a href="C:\Users\DIPAYAN DUTTA\Videos\company news new.html" >HOME</a>
+			<!--a href="http://stackoverflow.com/users/4084003/" target="_blank">Stackoverflow</a-->
+			<!--a href="https://in.linkedin.com/in/jonesvinothjoseph" target="_blank">LinkedIn</a-->
+			<!--a href="https://codepen.io/jo_Geek/" target="_blank">Codepen</a-->
+			
+		</div>
+	</div>
+</body> 
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a href="./jobseeker.index.html"><img src="/images/logo.png" alt=""
+        style="height: 80px; width: 100px; padding-left: 18px"></a>
+  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+       
+        <li class="nav-item">
+          <a class="nav-link" href="">PROFILE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/prepare123.html">PREPARE</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="./about us.html">About Us <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/jobseeker.contact">Contact Us<span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="./notification.html">Jobs<span class="sr-only"></span></a>
+        </li>
+  
+      </ul>
+  
+    </div>
+  </nav>
+
+
+<br><br>
+
+
+
+
+
+
+
+  
+    
+    <center><b>" WELCOME TO THE JOB PORTAL. Here you will find the best it company who hires  freshers, experienced Software Engineers."</b></center> </marquee>
+    
+    
+    
+    
+    <center style="font-size:40px";> <b> Companies  Activity Hiring </b></center><p><center> No.1 and most visited website for Placements in India.<br>
+    We help students to prepare for placements with the best study material, online classes, Sectional Statistics for better focus and Success stories & tips by Toppers on Job Portal.</center></p>
+       <center style=  background-color:F2DEBA ; ">
+    <br>
+     <div class="row"><div class="column" >
+        
+        <a href="https://career.infosys.com/joblist" target="_blank" > <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/v1415386231/utypaslbyxwfuwhfdzxd.png " width="300"  height="120" style="margin-right: 45px;" ></a>
+     <a href="https://www.tcs.com/careers" target="_blank"> <img src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/202106/tcs_logo_1200_020621101143.jpg?" width="300" 
+         height="120" style="margin-right: 50px;" > <span style="position: relative;bottom: -30px;left:-90px;color:#fec901;border:2px solid #fec901;background: #fff;font-size: large;">Hiring</span></a>
+        
+        
+      <a href="https://www.accenture.com/in-en/careers/jobsearch?jk=&sb=1&vw=0&is_rj=0&pg=1" target="_blank"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe97x-KD2Pec_w_A8kf03rMHgg36NWaicFeQ&usqp=CAU" width="300"  height="120"  ></a>
+    </div>
+    <br>
+    
+      <div class="column">
+        <a href="https://www.deloitte.com/global/en/careers/job-search.html" target="_blank"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0PeoIJE4JbCYeSxj9W_JiBC59NwztCTPVDg&usqp=CAU"width="300" height="120" style="margin-left:50px;"><span style="position: relative;bottom: -30px;left:-40px;color:#fec901;border:2px solid #fec901;background: #fff;font-size: large;">Hiring</span></a>
+    
+        <a href="https://careers.wipro.com/opportunities" target="_blank"><img src="https://bsmedia.business-standard.com/_media/bs/img/article/2021-04/15/full/1618488020-548.jpg"width="300" 
+         height="120"> </a>
+        <a href="https://careers.cognizant.com/global/en" target="_blank"><img src="/images/Cognizant.webp"width="300" 
+         height="120" style="margin-left:100px;"><span style="position: relative;bottom: -30px;left:-40px;color:#fec901;border:2px solid #fec901;background: #fff;font-size: large;">Hiring</span></a>
+      </div>
+    <br>
+      <div class="column">
+        <a href="https://www.hcltech.com/careers/all-career-opportunities" target="_blank"><img src="https://theshillongtimes.com/wp-content/uploads/2020/03/hcl-logo.png"width="300" 
+         height="120" style="margin-right: 43px;"></a>
+        <a href="https://careers.microsoft.com/us/en" target="_blank"><img src="https://blogs.microsoft.com/wp-content/uploads/prod/2012/08/8867.Microsoft_5F00_Logo_2D00_for_2D00_screen.jpg"width="300" 
+         height="120"style="margin-right: 95px;"></a>
+       <a href="https://www.amazon.jobs/en/" target="_blank"> <img src="https://animationvisarts.com/wp-content/uploads/2020/12/Amazon-current-Logo-2.jpg"width="300" 
+         height="120"></a>
+      </div>
+    <br></div>
+    </div></center>
+    <br>
+    <table>
+      <tr>
+        <th>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH-ZSfNXznH_liHW47yVl4Mm0aU87InV0VKg&usqp=CAU" alt="hiring image" style="width:350px;height:300px; margin-top: 40px; ">
+        </th>
+        <th>
+    <p> <center style="width:350px;height:300px; margin-top: 40px;"><br><B> If you’re looking for CS/IT, part-time or full-time IT jobs, you can find them on Our Job portal.  </B> </p><br>
+    
+         </th>
+         <th ><img src="/WhatsApp_icon.png" width="60" style="margin-left: 80px;">Whatsapp</th>
+         <th><img src="/Telegram_logo.svg.png"  width="60" style="margin-left: 40px;">Telegram</th>
+         <th ><img src="/pngtree-instagram-icon-png-image_6315974.png" width="60" style="margin-left: 40px;">Instagram</th>
+         <th ><img src="/Facebook_Logo_(2019).png" width="60" style="margin-left: 40px;">Facebook</th>
+        </tr>
+     </center></table>
+     <br>
+    <br>
+    
+  <section id="contact"
+    style="background-color: black; ;padding: 20px;width: 700 px;line-height: 2.5em; text-align:centre;">
+    <footer class="color-blue custom-footer-padding footer">
+      <div class="container-fluid text-white">
+        <i class="l-r-p social-icon fab fa-facebook-f"></i>
+        <i class="l-r-p social-icon fab fa-twitter"></i>
+        <i class="l-r-p social-icon fab fa-instagram"></i>
+        <i class="l-r-p social-icon fas fa-envelope"></i>
+        <p>
+        <h4 align="center">©Copyright 2022, All rights reserved.</h4>
+        </p>
+        <p>
+        <h4 align="center">Email:jobsDaily@gmail.com</h4>
+        </p>
+        <p>
+        <h4 align="center">MOB: 8777691386</h4>
+        </p>
+      </div>
+    </footer>
+  </section>
+    
+
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+
+</html> 
